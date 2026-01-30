@@ -31,7 +31,9 @@
       const users = await User.find();
       res.json(users);
     });
-
+   app.get('/', (req, res) => {
+      res.send('Hello from the backend server!');
+    });
     // POST: Add a new user
     app.post('/api/users', async (req, res) => {
       const { title,description } = req.body;
